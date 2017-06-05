@@ -1,25 +1,13 @@
 ﻿Configuration PrepareExch
 {
-param
-    (
 
-        [Int]$RetryCount=20,
-        [Int]$RetryIntervalSec=30,
-        [string]$SystemTimeZone
-    )
 
-   Import-DscResource -ModuleName PSDesiredStateConfiguration, xTimeZone
+   Import-DscResource -ModuleName PSDesiredStateConfiguration
 
     Node localhost
     {
         
-        xTimeZone TimeZone
-        {
 
-            IsSingleInstance = 'Yes'
-            TimeZone = $SystemTimeZone
-
-        }
         WindowsFeature ASHTTPActivate
         {
             Ensure = "Present"

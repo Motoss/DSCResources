@@ -4,10 +4,11 @@
     (
 
         [Int]$RetryCount=20,
-        [Int]$RetryIntervalSec=30
+        [Int]$RetryIntervalSec=30,
+        [string]$SystemTimeZone
     )
 
-    Import-DscResource -ModuleName xStorage
+    Import-DscResource -ModuleName xStorage, xTimeZone
 
 
     Node localhost
@@ -35,6 +36,14 @@
         {
             Ensure = "Present"
             Name = "AD-Federation"
+
+        }
+
+        xTimeZone TimeZone
+        {
+
+            IsSingleInstance = 'Yes'
+            TimeZone = $SystemTimeZone
 
         }
 
