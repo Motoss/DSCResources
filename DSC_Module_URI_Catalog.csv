@@ -1,0 +1,12 @@
+ModuleName,ModuleURI
+xPSDesiredStateConfiguration,https://github.com/Motoss/DSCResources/raw/master/xPSDesiredStateConfiguration.zip
+xStorage,https://github.com/Motoss/DSCResources/raw/master/xStorage.zip
+xNetworking,https://github.com/Motoss/DSCResources/raw/master/xNetworking.zip
+xActiveDirectory,https://github.com/Motoss/DSCResources/raw/master/xActiveDirectory.zip
+xCertificate,https://github.com/Motoss/DSCResources/raw/master/xCertificate.zip
+xComputerManagement,https://github.com/Motoss/DSCResources/raw/master/xComputerManagement.zip
+xExchange,https://github.com/Motoss/DSCResources/raw/master/xExchange.zip
+xPendingReboot,https://github.com/Motoss/DSCResources/raw/master/xPendingReboot.zip
+xPowerShellExecutionPolicy,https://github.com/Motoss/DSCResources/raw/master/xPowerShellExecutionPolicy.zip
+xTimeZone,https://github.com/Motoss/DSCResources/raw/master/xTimeZone.zip
+xWindowsUpdate,https://github.com/Motoss/DSCResources/raw/master/xWindowsUpdate.zip

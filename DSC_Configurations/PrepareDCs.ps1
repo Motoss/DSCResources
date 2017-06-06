@@ -8,7 +8,7 @@
         [string]$SystemTimeZone
     )
 
-    Import-DscResource -ModuleName xStorage, xTimeZone
+    Import-DscResource -ModuleName xStorage, xTimeZone, xWindowsUpdate
 
 
     Node localhost
@@ -58,6 +58,15 @@
             IsSingleInstance = 'Yes'
             TimeZone = $SystemTimeZone
 
+        }
+
+        xWindowsUpdateAgent MuSecurityImportant
+        {
+            IsSingleInstance = 'Yes'
+            UpdateNow        = $true
+            Category         = @('Security','Important')
+            Source           = 'MicrosoftUpdate'
+            Notifications    = 'Disabled'
         }
 
    }

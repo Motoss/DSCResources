@@ -7,7 +7,7 @@
         [Int]$RetryIntervalSec=30,
         [string]$SystemTimeZone
     )
-   Import-DscResource -ModuleName PSDesiredStateConfiguration, xTimeZone
+   Import-DscResource -ModuleName PSDesiredStateConfiguration, xTimeZone, xWindowsUpdate
 
     Node localhost
     {
@@ -35,6 +35,15 @@
             IsSingleInstance = 'Yes'
             TimeZone = $SystemTimeZone
 
+        }
+
+        xWindowsUpdateAgent MuSecurityImportant
+        {
+            IsSingleInstance = 'Yes'
+            UpdateNow        = $true
+            Category         = @('Security','Important')
+            Source           = 'MicrosoftUpdate'
+            Notifications    = 'Disabled'
         }
 
 
