@@ -19,7 +19,7 @@
         WindowsFeature ADFSInstall
         {
             Ensure = "Present"
-            Name = "AD-Federation"
+            Name = "ADFS-Federation"
 
         }
 
