@@ -8,8 +8,9 @@ param
         [string]$SystemTimeZone
     )
 
-   Import-DscResource -ModuleName PSDesiredStateConfiguration, xTimeZone, xWindowsUpdate
-
+   Import-DscResource -ModuleName PSDesiredStateConfiguration
+   Import-DscResource -ModuleName xTimeZone -ModuleVersion "1.6.0.0"
+   Import-DscResource -ModuleName xWindowsUpdate -ModuleVersion "2.6.0.0"
     Node localhost
     {
         
